@@ -1,3 +1,3 @@
 # codeleet
 
-My code for codeleet problems
+My code for codeleet problems in python.
