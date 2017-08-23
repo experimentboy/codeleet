@@ -1,0 +1,17 @@
+class Solution(object):
+    def findWords(self, words):
+        """
+        :type words: List[str]
+        :rtype: List[str]
+        """
+        import re
+        out = []
+        for word in range (0,len(words)):
+            d = [words[word]]
+            a = re.findall(r'[qwertyuiopQWERTYUIOP]+', words[word])
+            if a == d: out.append(words[word])
+            b = re.findall(r'[asdfghjklASDFGHJKL]+', words[word])
+            if b == d: out.append(words[word])
+            c = re.findall(r'[zxcvbnmZXCVBNM]+', words[word])
+            if c == d: out.append(words[word])
+        return out
