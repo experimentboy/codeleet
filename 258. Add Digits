@@ -1,0 +1,16 @@
+class Solution(object):
+    def addDigits(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+        temp = 0
+        if num < 10: return num
+        string_num = str(num)
+        while len(string_num) > 1:
+            for digit in string_num:
+                temp += int(digit)
+                string_num = str(temp)
+            out = temp
+            temp = 0
+        return out
